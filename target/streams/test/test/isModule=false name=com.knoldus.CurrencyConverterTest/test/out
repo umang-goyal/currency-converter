@@ -1,0 +1,7 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCurrencyConverterTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return amount if from and to are same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return equivalent amount if converted to Indian Rupees[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to other currency[0m[0m

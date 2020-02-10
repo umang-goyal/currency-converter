@@ -1,0 +1,1929 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/knoldus/CurrencyConverter.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package com.knoldus
+</span>2 <span style=''>
+</span>3 <span style=''>class CurrencyConverter {
+</span>4 <span style=''>
+</span>5 <span style=''>  /**
+</span>6 <span style=''>   * Converter class is a case class for all the currency converter. This class gives the template to convert
+</span>7 <span style=''>   * to a currnecy from other currency.
+</span>8 <span style=''>   * @param usd   conversion rate for usd
+</span>9 <span style=''>   * @param euro  conversion rate for euro
+</span>10 <span style=''>   * @param pound conversion rate for pound
+</span>11 <span style=''>   * @param swiss conversion rate for swiss
+</span>12 <span style=''>   * @param yen conversion rate for yen
+</span>13 <span style=''>   * @param rupees conversion rate for rupees
+</span>14 <span style=''>   * @param cd conversion rate for cad
+</span>15 <span style=''>   * @param ad conversion rate for aud
+</span>16 <span style=''>   * @param dinar conversion rate for dinar
+</span>17 <span style=''>   * @param yuan conversion rate for yuan
+</span>18 <span style=''>   */
+</span>19 <span style=''>
+</span>20 <span style=''>  case class Converter(usd: Double, euro: Double, pound: Double, swiss: Double, yen: Double,
+</span>21 <span style=''>                       rupees: Double, cad: Double, aud: Double, dinar: Double, yuan: Double) {
+</span>22 <span style=''>
+</span>23 <span style=''>    /**
+</span>24 <span style=''>     * rate is a map that stores the conversion rate for a currency from all other currency
+</span>25 <span style=''>     */
+</span>26 <span style=''>
+</span>27 <span style=''>    val rate = </span><span style='background: #AEF1AE'>Map(&quot;usd&quot; -&gt; usd, &quot;euro&quot; -&gt; euro, &quot;pound&quot; -&gt; pound, &quot;swiss&quot; -&gt; swiss, &quot;yen&quot; -&gt; yen,
+</span>28 <span style=''></span><span style='background: #AEF1AE'>      &quot;rupees&quot; -&gt; rupees, &quot;cad&quot; -&gt; cad, &quot;aud&quot; -&gt; aud,
+</span>29 <span style=''></span><span style='background: #AEF1AE'>      &quot;dinar&quot; -&gt; dinar, &quot;yuan&quot; -&gt; yuan)</span><span style=''>
+</span>30 <span style=''>
+</span>31 <span style=''>    /**
+</span>32 <span style=''>     * convert method returns the converted value currency to which it belongs to.
+</span>33 <span style=''>     * @param amount amount to be converted
+</span>34 <span style=''>     * @param currency current currency of the amount
+</span>35 <span style=''>     * @return converted currency of type Double
+</span>36 <span style=''>     */
+</span>37 <span style=''>
+</span>38 <span style=''>    def convert(amount: Double, currency: String): Double = {
+</span>39 <span style=''>      </span><span style='background: #AEF1AE'>amount * rate(currency)</span><span style=''>
+</span>40 <span style=''>    }
+</span>41 <span style=''>  }
+</span>42 <span style=''>
+</span>43 <span style=''>  val Usd: Converter = </span><span style='background: #AEF1AE'>Converter(1, 1.09, 1.29, 1.02, 0.0091, 0.014, 0.75, 0.67, 3.29, 0.14)</span><span style=''>
+</span>44 <span style=''>  val Euro: Converter = </span><span style='background: #AEF1AE'>Converter(0.91, 1, 1.18, 0.93, 0.0083, 0.013, 0.69, 0.61, 3.0, 0.13)</span><span style=''>
+</span>45 <span style=''>  val Pound: Converter = </span><span style='background: #AEF1AE'>Converter(0.78, 0.85, 1, 0.79, 0.0071, 0.011, 0.58, 0.52, 2.55, 0.11)</span><span style=''>
+</span>46 <span style=''>  val Swiss: Converter = </span><span style='background: #AEF1AE'>Converter(0.98, 1.07, 1.26, 1, 0.0089, 0.014, 0.73, 0.65, 3.22, 0.14)</span><span style=''>
+</span>47 <span style=''>  val Yen: Converter = </span><span style='background: #AEF1AE'>Converter(109.73, 120.11, 141.56, 112.19, 1, 1.53,  82.44, 73.24, 360.71, 15.68)</span><span style=''>
+</span>48 <span style=''>  val Rupees: Converter = </span><span style='background: #AEF1AE'>Converter(71.5, 78.28, 92.18,73.12, 0.65, 1, 53.73, 57.72, 235.09, 10.21)</span><span style=''>
+</span>49 <span style=''>  val Cad: Converter = </span><span style='background: #AEF1AE'>Converter(1.33, 1.46, 1.72, 1.36, 0.012, 0.019, 1, 0.89, 4.37, 0.19)</span><span style=''>
+</span>50 <span style=''>  val Aud: Converter = </span><span style='background: #AEF1AE'>Converter(1.50, 1.64, 1.93, 1.53, 0.014, 0.021, 1.13, 1, 4.93, 0.21)</span><span style=''>
+</span>51 <span style=''>  val Dinar: Converter = </span><span style='background: #AEF1AE'>Converter(0.30, 0.33, 0.39, 0.31, 0.0028, 0.0043, 0.23, 0.30, 1, 0.043)</span><span style=''>
+</span>52 <span style=''>  val Yuan: Converter = </span><span style='background: #AEF1AE'>Converter(7.0,  7.66,  9.02,  7.16, 0.064, 0.098, 5.26, 4.67, 23.02, 1)</span><span style=''>
+</span>53 <span style=''>
+</span>54 <span style=''>
+</span>55 <span style=''>
+</span>56 <span style=''>  def exceptionCheck(current: String, future: String): Boolean ={
+</span>57 <span style=''>    val acceptedCurrency = </span><span style='background: #AEF1AE'>List(&quot;usd&quot;, &quot;euro&quot;, &quot;pound&quot;, &quot;swiss&quot;, &quot;yen&quot;,
+</span>58 <span style=''></span><span style='background: #AEF1AE'>      &quot;rupees&quot;, &quot;cad&quot;, &quot;aud&quot; ,
+</span>59 <span style=''></span><span style='background: #AEF1AE'>      &quot;dinar&quot;, &quot;yuan&quot;)</span><span style=''>
+</span>60 <span style=''>    if (</span><span style='background: #AEF1AE'>acceptedCurrency.contains(current) &amp;&amp; acceptedCurrency.contains(future)</span><span style=''>){
+</span>61 <span style=''>      </span><span style='background: #AEF1AE'>true</span><span style=''>
+</span>62 <span style=''>    }
+</span>63 <span style=''>    else{
+</span>64 <span style=''>      </span><span style='background: #AEF1AE'>false</span><span style=''>
+</span>65 <span style=''>    }
+</span>66 <span style=''>  }
+</span>67 <span style=''>
+</span>68 <span style=''>  /**
+</span>69 <span style=''>   * converterSelector calls the required currency converter class for the given values.
+</span>70 <span style=''>   * @param amount numeric value of the amount to be converted
+</span>71 <span style=''>   * @param currentCurrency current currency of the amount
+</span>72 <span style=''>   * @param futureCurrency currency to which the current is to be converted
+</span>73 <span style=''>   * @return converted amount in the future currency, type double
+</span>74 <span style=''>   */
+</span>75 <span style=''>
+</span>76 <span style=''>  def converterSelector(amount: Double, currentCurrency: String, futureCurrency: String): Double = {
+</span>77 <span style=''>    if (</span><span style='background: #AEF1AE'>amount&lt;0</span><span style=''>){
+</span>78 <span style=''>      </span><span style='background: #AEF1AE'>throw new Exception (&quot;amount cannot be negative&quot;)</span><span style=''>
+</span>79 <span style=''>    }
+</span>80 <span style=''>      else </span><span style='background: #AEF1AE'>if(exceptionCheck(currentCurrency.toLowerCase(), futureCurrency.toLowerCase())){
+</span>81 <span style=''></span><span style='background: #AEF1AE'>
+</span>82 <span style=''></span><span style='background: #AEF1AE'>      futureCurrency.toLowerCase() match {
+</span>83 <span style=''></span><span style='background: #AEF1AE'>        case &quot;usd&quot; =&gt; Usd.convert(amount, currentCurrency.toLowerCase())
+</span>84 <span style=''></span><span style='background: #AEF1AE'>        case &quot;euro&quot; =&gt; Euro.convert(amount, currentCurrency.toLowerCase())
+</span>85 <span style=''></span><span style='background: #AEF1AE'>        case &quot;pound&quot; =&gt; Pound.convert(amount, currentCurrency.toLowerCase())
+</span>86 <span style=''></span><span style='background: #AEF1AE'>        case &quot;swiss&quot; =&gt; Swiss.convert(amount, currentCurrency.toLowerCase())
+</span>87 <span style=''></span><span style='background: #AEF1AE'>        case &quot;yen&quot; =&gt; Yen.convert(amount, currentCurrency.toLowerCase())
+</span>88 <span style=''></span><span style='background: #AEF1AE'>        case _ =&gt; converterSelectorExtended(amount, currentCurrency.toLowerCase(), futureCurrency.toLowerCase())
+</span>89 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>90 <span style=''></span><span style='background: #AEF1AE'>    }
+</span>91 <span style=''></span><span style='background: #AEF1AE'>
+</span>92 <span style=''></span><span style='background: #AEF1AE'>    else {
+</span>93 <span style=''></span><span style='background: #AEF1AE'>      throw new Exception (&quot;conversion for this not available&quot;)
+</span>94 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>95 <span style=''>  }
+</span>96 <span style=''>
+</span>97 <span style=''>  private def converterSelectorExtended(amount: Double, currentCurrency: String, futureCurrency: String):Double={
+</span>98 <span style=''>    futureCurrency match {
+</span>99 <span style=''>      case &quot;rupees&quot; =&gt; </span><span style='background: #AEF1AE'>Rupees.convert(amount, currentCurrency.toLowerCase())</span><span style=''>
+</span>100 <span style=''>      case &quot;cad&quot; =&gt; </span><span style='background: #AEF1AE'>Cad.convert(amount, currentCurrency.toLowerCase())</span><span style=''>
+</span>101 <span style=''>      case &quot;aud&quot; =&gt; </span><span style='background: #AEF1AE'>Aud.convert(amount, currentCurrency.toLowerCase())</span><span style=''>
+</span>102 <span style=''>      case &quot;dinar&quot; =&gt; </span><span style='background: #AEF1AE'>Dinar.convert(amount, currentCurrency.toLowerCase())</span><span style=''>
+</span>103 <span style=''>      case &quot;yuan&quot; =&gt; </span><span style='background: #AEF1AE'>Yuan.convert(amount, currentCurrency.toLowerCase())</span><span style=''>
+</span>104 <span style=''>      //case _ =&gt; throw new Exception(&quot;conversion for this currency not available&quot;)
+</span>105 <span style=''>    }
+</span>106 <span style=''>  }
+</span>107 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          993
+          -
+          998
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.pound
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.pound
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          1011
+          -
+          1016
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.swiss
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.swiss
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          961
+          -
+          964
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.usd
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.usd
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          976
+          -
+          980
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.euro
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.euro
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          1027
+          -
+          1030
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.yen
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.yen
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          966
+          -
+          972
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;euro&quot;
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          1018
+          -
+          1023
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;yen&quot;
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          948
+          -
+          1125
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.Map.apply[String, Double](scala.Predef.ArrowAssoc[String](&quot;usd&quot;).-&gt;[Double](Converter.this.usd), scala.Predef.ArrowAssoc[String](&quot;euro&quot;).-&gt;[Double](Converter.this.euro), scala.Predef.ArrowAssoc[String](&quot;pound&quot;).-&gt;[Double](Converter.this.pound), scala.Predef.ArrowAssoc[String](&quot;swiss&quot;).-&gt;[Double](Converter.this.swiss), scala.Predef.ArrowAssoc[String](&quot;yen&quot;).-&gt;[Double](Converter.this.yen), scala.Predef.ArrowAssoc[String](&quot;rupees&quot;).-&gt;[Double](Converter.this.rupees), scala.Predef.ArrowAssoc[String](&quot;cad&quot;).-&gt;[Double](Converter.this.cad), scala.Predef.ArrowAssoc[String](&quot;aud&quot;).-&gt;[Double](Converter.this.aud), scala.Predef.ArrowAssoc[String](&quot;dinar&quot;).-&gt;[Double](Converter.this.dinar), scala.Predef.ArrowAssoc[String](&quot;yuan&quot;).-&gt;[Double](Converter.this.yuan))
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          982
+          -
+          989
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;pound&quot;
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          1000
+          -
+          1007
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;swiss&quot;
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          952
+          -
+          957
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;usd&quot;
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          982
+          -
+          998
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;pound&quot;).-&gt;[Double](Converter.this.pound)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          952
+          -
+          964
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;usd&quot;).-&gt;[Double](Converter.this.usd)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          1000
+          -
+          1016
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;swiss&quot;).-&gt;[Double](Converter.this.swiss)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          1018
+          -
+          1030
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;yen&quot;).-&gt;[Double](Converter.this.yen)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          966
+          -
+          980
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;euro&quot;).-&gt;[Double](Converter.this.euro)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1081
+          -
+          1084
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.aud
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.aud
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          1050
+          -
+          1056
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.rupees
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.rupees
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1067
+          -
+          1070
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.cad
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.cad
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          1072
+          -
+          1077
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;aud&quot;
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          1038
+          -
+          1046
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;rupees&quot;
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1058
+          -
+          1063
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;cad&quot;
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          1038
+          -
+          1056
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;rupees&quot;).-&gt;[Double](Converter.this.rupees)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1058
+          -
+          1070
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;cad&quot;).-&gt;[Double](Converter.this.cad)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1072
+          -
+          1084
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;aud&quot;).-&gt;[Double](Converter.this.aud)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1103
+          -
+          1108
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.dinar
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.dinar
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          1120
+          -
+          1124
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.yuan
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.yuan
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1092
+          -
+          1099
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;dinar&quot;
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          1110
+          -
+          1116
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;yuan&quot;
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1092
+          -
+          1108
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;dinar&quot;).-&gt;[Double](Converter.this.dinar)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1110
+          -
+          1124
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](&quot;yuan&quot;).-&gt;[Double](Converter.this.yuan)
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          1451
+          -
+          1465
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Converter.this.rate.apply(currency)
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          1442
+          -
+          1465
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          amount.*(Converter.this.rate.apply(currency))
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          1500
+          -
+          1569
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(1.0, 1.09, 1.29, 1.02, 0.0091, 0.014, 0.75, 0.67, 3.29, 0.14)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1594
+          -
+          1662
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(0.91, 1.0, 1.18, 0.93, 0.0083, 0.013, 0.69, 0.61, 3.0, 0.13)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1688
+          -
+          1757
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(0.78, 0.85, 1.0, 0.79, 0.0071, 0.011, 0.58, 0.52, 2.55, 0.11)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1783
+          -
+          1852
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(0.98, 1.07, 1.26, 1.0, 0.0089, 0.014, 0.73, 0.65, 3.22, 0.14)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1876
+          -
+          1956
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(109.73, 120.11, 141.56, 112.19, 1.0, 1.53, 82.44, 73.24, 360.71, 15.68)
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          1983
+          -
+          2056
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(71.5, 78.28, 92.18, 73.12, 0.65, 1.0, 53.73, 57.72, 235.09, 10.21)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          2080
+          -
+          2148
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(1.33, 1.46, 1.72, 1.36, 0.012, 0.019, 1.0, 0.89, 4.37, 0.19)
+        </td>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          2172
+          -
+          2240
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(1.5, 1.64, 1.93, 1.53, 0.014, 0.021, 1.13, 1.0, 4.93, 0.21)
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          2266
+          -
+          2337
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(0.3, 0.33, 0.39, 0.31, 0.0028, 0.0043, 0.23, 0.3, 1.0, 0.043)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          2362
+          -
+          2433
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Converter.apply(7.0, 7.66, 9.02, 7.16, 0.064, 0.098, 5.26, 4.67, 23.02, 1.0)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          2530
+          -
+          2628
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;usd&quot;, &quot;euro&quot;, &quot;pound&quot;, &quot;swiss&quot;, &quot;yen&quot;, &quot;rupees&quot;, &quot;cad&quot;, &quot;aud&quot;, &quot;dinar&quot;, &quot;yuan&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          60
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          2637
+          -
+          2708
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          acceptedCurrency.contains[String](current).&amp;&amp;(acceptedCurrency.contains[String](future))
+        </td>
+      </tr><tr>
+        <td>
+          60
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          2675
+          -
+          2708
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          acceptedCurrency.contains[String](future)
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          2717
+          -
+          2721
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          2717
+          -
+          2721
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          2744
+          -
+          2749
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          false
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          2744
+          -
+          2749
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          false
+        </td>
+      </tr><tr>
+        <td>
+          77
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          3236
+          -
+          3244
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          amount.&lt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          3253
+          -
+          3302
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.Exception(&quot;amount cannot be negative&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          3253
+          -
+          3302
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.Exception(&quot;amount cannot be negative&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          3320
+          -
+          4028
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (CurrencyConverter.this.exceptionCheck(currentCurrency.toLowerCase(), futureCurrency.toLowerCase()))
+  futureCurrency.toLowerCase() match {
+    case &quot;usd&quot; =&gt; CurrencyConverter.this.Usd.convert(amount, currentCurrency.toLowerCase())
+    case &quot;euro&quot; =&gt; CurrencyConverter.this.Euro.convert(amount, currentCurrency.toLowerCase())
+    case &quot;pound&quot; =&gt; CurrencyConverter.this.Pound.convert(amount, currentCurrency.toLowerCase())
+    case &quot;swiss&quot; =&gt; CurrencyConverter.this.Swiss.convert(amount, currentCurrency.toLowerCase())
+    case &quot;yen&quot; =&gt; CurrencyConverter.this.Yen.convert(amount, currentCurrency.toLowerCase())
+    case _ =&gt; CurrencyConverter.this.converterSelectorExtended(amount, currentCurrency.toLowerCase(), futureCurrency.toLowerCase())
+  }
+else
+  throw new scala.`package`.Exception(&quot;conversion for this not available&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          3323
+          -
+          3398
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.exceptionCheck
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.exceptionCheck(currentCurrency.toLowerCase(), futureCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          3369
+          -
+          3397
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          futureCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          3338
+          -
+          3367
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          82
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          3408
+          -
+          3940
+        </td>
+        <td>
+          Match
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          futureCurrency.toLowerCase() match {
+  case &quot;usd&quot; =&gt; CurrencyConverter.this.Usd.convert(amount, currentCurrency.toLowerCase())
+  case &quot;euro&quot; =&gt; CurrencyConverter.this.Euro.convert(amount, currentCurrency.toLowerCase())
+  case &quot;pound&quot; =&gt; CurrencyConverter.this.Pound.convert(amount, currentCurrency.toLowerCase())
+  case &quot;swiss&quot; =&gt; CurrencyConverter.this.Swiss.convert(amount, currentCurrency.toLowerCase())
+  case &quot;yen&quot; =&gt; CurrencyConverter.this.Yen.convert(amount, currentCurrency.toLowerCase())
+  case _ =&gt; CurrencyConverter.this.converterSelectorExtended(amount, currentCurrency.toLowerCase(), futureCurrency.toLowerCase())
+}
+        </td>
+      </tr><tr>
+        <td>
+          82
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          3408
+          -
+          3436
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          futureCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          83
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          3467
+          -
+          3517
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Usd.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          83
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          3487
+          -
+          3516
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          3541
+          -
+          3592
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Euro.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          3562
+          -
+          3591
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          85
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          3639
+          -
+          3668
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          85
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          3617
+          -
+          3669
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Pound.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          3694
+          -
+          3746
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Swiss.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          3716
+          -
+          3745
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          87
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          3769
+          -
+          3819
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Yen.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          87
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          3789
+          -
+          3818
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          88
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          3872
+          -
+          3901
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          88
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          3838
+          -
+          3932
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.converterSelectorExtended
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.converterSelectorExtended(amount, currentCurrency.toLowerCase(), futureCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          88
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          3903
+          -
+          3931
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          futureCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          93
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          3965
+          -
+          4022
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.Exception(&quot;conversion for this not available&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          93
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          3965
+          -
+          4022
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.Exception(&quot;conversion for this not available&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          99
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          4198
+          -
+          4251
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Rupees.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          99
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          4221
+          -
+          4250
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          100
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          4292
+          -
+          4321
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          100
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          4272
+          -
+          4322
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Cad.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          101
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          4343
+          -
+          4393
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Aud.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          101
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          4363
+          -
+          4392
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          102
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          4416
+          -
+          4468
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Dinar.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr><tr>
+        <td>
+          102
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          4438
+          -
+          4467
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          103
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          4511
+          -
+          4540
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toLowerCase
+        </td>
+        <td style="background: #AEF1AE">
+          currentCurrency.toLowerCase()
+        </td>
+      </tr><tr>
+        <td>
+          103
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          4490
+          -
+          4541
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.knoldus.CurrencyConverter.Converter.convert
+        </td>
+        <td style="background: #AEF1AE">
+          CurrencyConverter.this.Yuan.convert(amount, currentCurrency.toLowerCase())
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

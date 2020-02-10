@@ -1,0 +1,301 @@
+<scoverage 
+statement-count="84" statements-invoked="84" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1581323307842">
+    <packages>
+        <package name="com.knoldus" statement-count="84" statements-invoked="84" statement-rate="100.00">
+            <classes>
+                <class 
+                name="com.knoldus.CurrencyConverter" filename="com/knoldus/CurrencyConverter.scala" statement-count="51" statements-invoked="51" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.knoldus/CurrencyConverter/converterSelector" statement-count="24" statements-invoked="24" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3872" end="3901" line="88" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3467" end="3517" line="83" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3639" end="3668" line="85" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3253" end="3302" line="78" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3408" end="3940" line="82" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3320" end="4028" line="80" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3323" end="3398" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3694" end="3746" line="86" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3965" end="4022" line="93" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3716" end="3745" line="86" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3369" end="3397" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3769" end="3819" line="87" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3487" end="3516" line="83" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3838" end="3932" line="88" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3253" end="3302" line="78" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3541" end="3592" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3562" end="3591" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3903" end="3931" line="88" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3617" end="3669" line="85" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3338" end="3367" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3965" end="4022" line="93" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3408" end="3436" line="82" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3789" end="3818" line="87" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelector" start="3236" end="3244" line="77" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.knoldus/CurrencyConverter/converterSelectorExtended" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4511" end="4540" line="103" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4292" end="4321" line="100" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4343" end="4393" line="101" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4416" end="4468" line="102" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4198" end="4251" line="99" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4363" end="4392" line="101" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4272" end="4322" line="100" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4438" end="4467" line="102" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4490" end="4541" line="103" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="converterSelectorExtended" start="4221" end="4250" line="99" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.knoldus/CurrencyConverter/&lt;none&gt;" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="2172" end="2240" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1594" end="1662" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1876" end="1956" line="47" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="2080" end="2148" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="2362" end="2433" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1500" end="1569" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1783" end="1852" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1688" end="1757" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1983" end="2056" line="48" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="2266" end="2337" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.knoldus/CurrencyConverter/exceptionCheck" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2744" end="2749" line="64" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2530" end="2628" line="57" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2717" end="2721" line="61" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2637" end="2708" line="60" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2744" end="2749" line="64" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2675" end="2708" line="60" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="CurrencyConverter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="exceptionCheck" start="2717" end="2721" line="61" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.knoldus.CurrencyConverter.Converter" filename="com/knoldus/CurrencyConverter.scala" statement-count="33" statements-invoked="33" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.knoldus/Converter/&lt;none&gt;" statement-count="31" statements-invoked="31" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1081" end="1084" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1050" end="1056" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="993" end="998" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1103" end="1108" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1011" end="1016" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1120" end="1124" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1067" end="1070" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="961" end="964" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="976" end="980" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1027" end="1030" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="966" end="972" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1018" end="1023" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1072" end="1077" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="948" end="1125" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1038" end="1046" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="982" end="989" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1092" end="1099" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1000" end="1007" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="952" end="957" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1058" end="1063" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1110" end="1116" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1092" end="1108" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1038" end="1056" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="982" end="998" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1058" end="1070" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="952" end="964" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1000" end="1016" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1110" end="1124" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1018" end="1030" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="1072" end="1084" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="&lt;none&gt;" start="966" end="980" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.knoldus/Converter/convert" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="convert" start="1451" end="1465" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.knoldus" class="Converter" class-type="Class" full-class-name="com.knoldus.CurrencyConverter.Converter" source="/home/knoldus/knoldus-assignments/Currency-coverter/src/main/scala/com/knoldus/CurrencyConverter.scala" method="convert" start="1442" end="1465" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

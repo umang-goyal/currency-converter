@@ -1,0 +1,25 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCurrencyConverterSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return amount if current and future currency are same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return equivalent amount if converted to Dinar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to AUD[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to USD[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to EURO[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to POUND[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to SWISS[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to yen[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to CAD[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return converted amount if converted to YUAN[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return error of negative number[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConverter method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return error of currency converter not available[0m[0m

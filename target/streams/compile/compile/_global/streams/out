@@ -1,0 +1,5 @@
+[0m[[0m[0minfo[0m] [0m[0mCleaning datadir [/home/knoldus/knoldus-assignments/Currency-coverter/target/scala-2.13/scoverage-data][0m
+[0m[[0m[0minfo[0m] [0m[0mBeginning coverage instrumentation[0m
+[0m[[0m[0minfo[0m] [0m[0mInstrumentation completed [84 statements][0m
+[0m[[0m[0minfo[0m] [0m[0mWrote instrumentation file [/home/knoldus/knoldus-assignments/Currency-coverter/target/scala-2.13/scoverage-data/scoverage.coverage][0m
+[0m[[0m[0minfo[0m] [0m[0mWill write measurement data to [/home/knoldus/knoldus-assignments/Currency-coverter/target/scala-2.13/scoverage-data][0m
