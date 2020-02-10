@@ -97,7 +97,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
   "Converter method" should "return error of negative number" in {
     val amount = -45
     try {
-      val actualResult = currencyConverter.converterSelector(amount, "usd", "yuan")
+      currencyConverter.converterSelector(amount, "usd", "yuan")
     }
     catch {
       case e: Exception => assert(e.getMessage == "amount cannot be negative")
@@ -107,7 +107,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
   "Converter method" should "return error of currency converter not available" in {
     val amount = 45
     try {
-      val actualResult = currencyConverter.converterSelector(amount, "usdd", "yuan")
+      currencyConverter.converterSelector(amount, "usdd", "yuan")
     }
     catch {
       case e: Exception => assert(e.getMessage == "conversion for this not available")

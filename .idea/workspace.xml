@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a6b14d8-92b1-4ae8-bddd-617f9de59636" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/knoldus/CurrencyConverter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/knoldus/CurrencyConverter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/com/knoldus/CurrencyConverterSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/knoldus/CurrencyConverterSpec.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
