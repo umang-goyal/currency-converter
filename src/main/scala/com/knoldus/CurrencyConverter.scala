@@ -11,8 +11,8 @@ class CurrencyConverter {
    * @param swiss conversion rate for swiss
    * @param yen conversion rate for yen
    * @param rupees conversion rate for rupees
-   * @param cd conversion rate for cad
-   * @param ad conversion rate for aud
+   * @param cad conversion rate for cad
+   * @param aud conversion rate for aud
    * @param dinar conversion rate for dinar
    * @param yuan conversion rate for yuan
    */
@@ -51,7 +51,12 @@ class CurrencyConverter {
   val Dinar: Converter = Converter(0.30, 0.33, 0.39, 0.31, 0.0028, 0.0043, 0.23, 0.30, 1, 0.043)
   val Yuan: Converter = Converter(7.0,  7.66,  9.02,  7.16, 0.064, 0.098, 5.26, 4.67, 23.02, 1)
 
-
+  /**
+   * checks if converter for the currency is available or not
+   * @param current current currency
+   * @param future future currency
+   * @return returns true if converter id available else false
+   */
 
   def exceptionCheck(current: String, future: String): Boolean ={
     val acceptedCurrency = List("usd", "euro", "pound", "swiss", "yen",
@@ -101,7 +106,6 @@ class CurrencyConverter {
       case "aud" => Aud.convert(amount, currentCurrency.toLowerCase())
       case "dinar" => Dinar.convert(amount, currentCurrency.toLowerCase())
       case "yuan" => Yuan.convert(amount, currentCurrency.toLowerCase())
-      //case _ => throw new Exception("conversion for this currency not available")
     }
   }
 }
